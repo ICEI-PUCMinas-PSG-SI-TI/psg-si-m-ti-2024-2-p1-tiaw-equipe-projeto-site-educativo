@@ -1,11 +1,11 @@
 # Informações do Projeto
-`TÍTULO DO PROJETO`  
+`Comunidades Ativas`  
 
 Trabalho Interdisciplinar - Aplicacões Web
 
-`CURSO`
+`Trabalho Interdisciplinar: Aplicações Web`
 
-`SEMESTRE`
+`1 SEMESTRE`
 
 ## Participantes
 
@@ -14,7 +14,7 @@ Os membros do grupo são:
 - Emanuel de Oliveira
 - Joao Frois
 - Kawany Teixeira
-- Vitoria
+- Vitoria Figueiredo
 
 > Inclua a lista dos membros da equipe com seus nomes completos.
 
