@@ -1,61 +1,49 @@
 # Introdução
+>Com o avanço da tecnologia e o crescente acesso à internet, a educação a distância se torna uma
+>erramenta poderosa para democratizar o conhecimento. O projeto "Comunidades Ativas" visa criar um
+>site que oferece videoaulas gratuitas em diversas disciplinas, além de promover um ambiente interativo
+>para aprendizado colaborativo. A proposta é atender à demanda por educação de qualidade, acessível
+>a todos, independentemente da localização ou condição socioeconômica.
 
 ## Problema
-> Nesse momento você deve apresentar o problema que a sua aplicação deve
-> resolver. No entanto, não é a hora de comentar sobre a aplicação.
-> Descreva também o contexto em que essa aplicação será usada, se
-> houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de
-> fato existir, pois ainda não é a hora de apresentar requisitos
-> detalhados ou projetos.
->
-> Nesse momento, o grupo pode optar por fazer uso
-> de ferramentas como Design Thinking, que permite um olhar de ponta a
-> ponta para o problema.
->
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+> O principal problema que o projeto pretende resolver é a dificuldade de acesso à educação de qualidade
+>e recursos didáticos em diversas áreas do conhecimento. Muitos estudantes, especialmente aqueles
+>de comunidades carentes, não têm acesso a aulas particulares ou materiais de estudo adequados.
+>Além disso, a falta de um espaço para troca de experiências e feedback pode desestimular o
+>aprendizado. O "Comunidades Ativas" visa criar uma solução para esses desafios, oferecendo uma
+>plataforma que centraliza o conhecimento e promove a colaboração. A necessidade de socialização e
+>construção de amizades em novas comunidades também será abordada por meio dos grupos no
+>gittWhatsApp.
 
 ## Objetivos
 
-> Aqui você deve descrever os objetivos do trabalho indicando que o
-> objetivo geral é desenvolver um software para solucionar o problema
-> apresentado acima. Apresente também alguns (pelo menos 2) objetivos
-> específicos dependendo de onde você vai querer concentrar a sua
-> prática investigativa, ou como você vai aprofundar no seu trabalho.
-> 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
-
+>O principal objetivo do projeto "Comunidades Ativas" é disponibilizar videoaulas gratuitas de disciplinas
+>como canto, música, português, matemática, geografia, entre outras disciplinas, proporcionando um
+>espaço de aprendizado online. Além disso, o site contará com uma biblioteca virtual com links para
+>referências de livros, um mural para feedbacks dos usuários e uma funcionalidade de conversas
+>privadas entre alunos e professores. Para fomentar a interação social, também serão criados grupos no
+>WhatsApp, onde os usuários poderão compartilhar eventos, como jogos de futebol e vôlei, promovendo
+>amizades e integração.
+ 
 ## Justificativa
 
-> Descreva a importância ou a motivação para trabalhar com esta aplicação
-> que você escolheu. Indique as razões pelas quais você escolheu seus
-> objetivos específicos ou as razões para aprofundar em certos aspectos
-> do software.
-> 
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e
-> dados estatísticos, que podem ser apresentados, com o objetivo de
-> esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+>A educação é um direito fundamental e deve ser acessível a todos. No entanto, muitos estudantes
+>enfrentam barreiras, como a falta de recursos financeiros para cursos pagos ou a dificuldade em
+>acessar materiais didáticos de qualidade. O "Comunidades Ativas" busca superar essas barreiras,
+>oferecendo conteúdos gratuitos que atendam às necessidades de aprendizado. Além disso, a interação
+>entre alunos e professores por meio de conversas privadas potencializa o processo de ensinoaprendizagem,
+>permitindo que dúvidas sejam esclarecidas e que cada estudante receba atenção
+>personalizada. A criação de grupos no WhatsApp atenderá também à necessidade de socialização,
+>especialmente para aqueles que estão se adaptando a uma nova cidade.
 
 ## Público-Alvo
 
-> Descreva quem serão as pessoas que usarão a sua aplicação indicando os
-> diferentes perfis. O objetivo aqui não é definir quem serão os
-> clientes ou quais serão os papéis dos usuários na aplicação. A ideia
-> é, dentro do possível, conhecer um pouco mais sobre o perfil dos
-> usuários: conhecimentos prévios, relação com a tecnologia, relações
-> hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição
-> textual, ou diagramas de personas, mapa de stakeholders, ou como o
-> grupo achar mais conveniente.
-> 
-> **Links Úteis**:
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+>O público-alvo do projeto inclui estudantes de diversas faixas etárias e níveis de escolaridade que
+>buscam aprimorar seus conhecimentos em áreas como música, línguas, ciências exatas e ciências
+>humanas. Além disso, o projeto também é voltado para educadores que desejam compartilhar seus
+>conhecimentos e interagir com os alunos de maneira inovadora. O site é especialmente destinado a
+>pessoas de comunidades carentes, que muitas vezes não têm acesso a recursos educacionais
+>adequados, bem como a novos moradores que desejam se integrar socialmente e fazer novas amizades
+>na cidade.
+
  
