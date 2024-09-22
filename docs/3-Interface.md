@@ -24,19 +24,17 @@
 
 ## Wireframes
 
-![Wirframe 1](images/img-1.png)
 > Pagina inicial feita para mostrar opcões de cursos e materiais ao usuario.
 > Caso o usuario já esteja logado será exibido cursos relacionados ao perfil dele.
+![Wirframe 1](images/img-1.png)
 
+> Pagina inicial feita para mostrar opcões de cursos e materiais ao usuario.
+> Pagina de login
 ![Wirframe 2](images/img-2.png)
-![Wirframe 3](images/img-3.png)
-![Wirframe 4](images/img-4.png)
 
-> São protótipos usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante do
-> layout de elementos fundamentais na interface.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
+> Pagina contendo todos os cursos em que o usuario esta inscrito.
+![Wirframe 3](images/img-3.png)
+
+> Pagina para assistir a aula e dar feedback.
+> Pagina de biblioteca contendo os materiais educativos.
+![Wirframe 4](images/img-4.png)
