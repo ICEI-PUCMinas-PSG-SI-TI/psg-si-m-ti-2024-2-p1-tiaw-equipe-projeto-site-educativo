@@ -24,7 +24,10 @@
 
 ## Wireframes
 
-![Exemplo de Wireframe](images/wireframe-example.png)
+![Wirframe 1](images/img-1.png)
+![Wirframe 2](images/img-2.png)
+![Wirframe 3](images/img-3.png)
+![Wirframe 4](images/img-4.png)
 
 > São protótipos usados em design de interface para sugerir a
 > estrutura de um site web e seu relacionamentos entre suas
