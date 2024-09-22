@@ -25,6 +25,9 @@
 ## Wireframes
 
 ![Wirframe 1](images/img-1.png)
+> Pagina inicial feita para mostrar opcões de cursos e materiais ao usuario.
+> Caso o usuario já esteja logado será exibido cursos relacionados ao perfil dele.
+
 ![Wirframe 2](images/img-2.png)
 ![Wirframe 3](images/img-3.png)
 ![Wirframe 4](images/img-4.png)
