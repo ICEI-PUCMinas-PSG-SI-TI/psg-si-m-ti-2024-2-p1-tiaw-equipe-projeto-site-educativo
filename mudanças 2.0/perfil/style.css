@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    /* Garante que o html e o body ocupem 100% da altura da tela */
+    margin-bottom: 0;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* A altura mínima é 100% da altura da tela */
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: deepskyblue;
+    min-height: 100vh;
+}
+
+#feedbacks {
+    display: flex;
+    flex: 1;
+    min-height: 5vh;
+    position: fixed;
+    bottom: 0; 
+}
+#menu  {
+    display: none;  
+}
+
+h2{
+    display: inline;
+}
+@media screen and (max-width: 500px) {
+    #menu{
+        display: inline;
+    }
+    h2{
+        display: inline;
+    }
+    .sidebar {
+       display: none;
+    }
+
+
+#Adicionar{
+    margin-bottom: 5px;
+}
+#menuConteudo{
+    margin-top: 15px;
+    padding: 10px;
+    justify-items: center;
+}
+
+}
