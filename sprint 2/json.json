@@ -1,0 +1,160 @@
+{
+
+    "videosCarrossel":[
+        {
+            "id": 0,
+            "titulo": "After Enem Dia 1 - Prof.Noslen",
+            "texto": "Fala, moçada, o Portal VEM DE ENEM e o Prof. NOSLEN (do maior canal de educação no YouTube Brasil 🇧🇷) estão juntos para te ajudar a dar aquele gás na reta final! Nos domingos, 03 e 10/11, teremos correções ao vivo das questões do ENEM e comentários exclusivos para você aprimorar suas estratégias e garantir o melhor desempenho! ⭐️",
+            "frame": "https://i.ytimg.com/vi/DzsKkL_8Dxk/maxresdefault.jpg",
+            "link": "https://www.youtube.com/live/DzsKkL_8Dxk?si=FG8ssATpeyqgT9Pp"
+        },
+        {
+            "id": 1,
+            "titulo": "Exercicios de Compreensão de textos [Enem]- Prof.Noslen",
+            "texto": "O Professor Noslen vai te mostrar como as bancas do ENEM elaboram as questões de compreensão de textos, com exemplos reais da prova de 2023. Você vai ter acesso a dicas matadoras para otimizar seu tempo na prova e garantir que você consiga responder todas as questões.",
+            "frame": "https://i.ytimg.com/vi/XgiubkEAqdo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCO7VKZrLIdBS83IW9uaJKLs7yB1g",
+            "link": "https://youtu.be/XgiubkEAqdo?si=wLoZDZsqPMvxUIh1"
+        },
+        {
+            "id": 2,
+            "titulo": "Como fazer a INTRODUÇÂO perfeita para o ENEM - Prof.Noslen",
+            "texto": "Tá ligado que a introdução da redação do ENEM é o primeiro passo pra conquistar a nota 1000? Nesse vídeo, eu vou te mostrar, passo a passo, como construir uma introdução que deixa qualquer corretor babando!",
+            "frame": "https://i.ytimg.com/vi/WfP2bl5xb5E/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCOmCTzTVqQX-UFzaxqW2XGfaQqJQ",
+            "link": "https://youtu.be/WfP2bl5xb5E?si=EKkU013o7tBpQ5EI"
+        },
+        {
+            "id": 3,
+            "titulo": "Simple Present . Correção - Prof.Rui Ventura",
+            "texto": "Nesta aula você poderá corrigir as atividades da aula sobre Simple Present, entender a estrutura e uso correto do presente simples em Inglês e ainda treinar a pronúncia.",
+            "frame": "https://i.ytimg.com/vi/TTN2ZqLU-pU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLABP3HfvMs1cIBm9-_QvsHghcLTLA",
+            "link": "https://youtu.be/TTN2ZqLU-pU?si=ri4ozZ50mdW4Ehn5"
+        },
+        {
+            "id": 4,
+            "titulo": "Days of the Week - Prof.Rui Ventura",
+            "texto": "Na aula de inglês com o professor Rui Ventura, você vai aprender os dias da semana de um jeito leve e divertido! Com dicas práticas e descontraídas, ele facilita a memorização e ajuda a fixar o conteúdo no seu dia a dia.",
+            "frame": "https://i.ytimg.com/vi/f5oTdtf0RC0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDDNfXOcgE-yNJII3h3GworwKdNgg",
+            "link": "https://youtu.be/f5oTdtf0RC0?si=Gv7G4NOquuSxoLre"
+        },
+        {
+            "id": 5,
+            "titulo": "Greetings - Prof.Rui Ventura",
+            "texto": "Na aula de inglês com o professor Rui Ventura, você vai dominar os greetings e aprender a cumprimentar como um verdadeiro falante! Com seu jeito leve e prático, ele ensina as saudações para diferentes ocasiões, sempre com um toque de diversão.",
+            "frame": "https://i.ytimg.com/vi/qCvW_afKadw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCea04eQPzyfDsBYPAFs6T_0QZAbA",
+            "link": "https://youtu.be/qCvW_afKadw?si=Atr9k31yU0BsrpWh"
+        }
+
+
+    ],
+    
+    "livrosdigitais": [
+{
+    "id": 0,
+    "nome": "livro de geografia",
+    "imagem": "https://imagens.disal.com.br/produtos/ampliada/5629837.jpg" ,
+    "linklivro":  "https://viewerdemo.moderna.com.br/index.html#/viewer/ARPGEOG5E%20DEMO/2bdf8eca956ebab05dd8704d86c411cb"
+},
+{
+    "id": 1,
+    "nome": "livro de ciências",
+    "imagem": "https://imagens.disal.com.br/produtos/ampliada/5638879.jpg" ,
+    "linklivro":  "https://viewerdemo.moderna.com.br/index.html#/viewer/ARPCIEN5E%20DEMO/1adc47f68aebcb61b91fe833c499a0ee"
+},
+{
+    "id": 2,
+    "nome": "livro de matemática",
+    "imagem": "https://imagens.disal.com.br/produtos/ampliada/4318024.jpg" ,
+    "linklivro":  "https://viewerdemo.moderna.com.br/index.html#/viewer/BUPMATE1E%20DEMO/1"
+},
+{
+    "id": 3,
+    "nome": "livro de portuguêS",
+    "imagem": "https://m.media-amazon.com/images/I/61QdFtxMroL._AC_UF894,1000_QL80_.jpg" ,
+    "linklivro":  "https://viewerdemo.moderna.com.br/index.html#/viewer/ARPGEOG5E%20DEMO/2bdf8eca956ebab05dd8704d86c411cb"
+},
+{
+    "id": 4,
+    "nome": "livro de matemática",
+    "imagem": "https://imagens.disal.com.br/produtos/ampliada/5629837.jpg" ,
+    "linklivro":  "https://viewerdemo.moderna.com.br/index.html#/viewer/BUPPORT1E%20DEMO/1"
+},
+{
+    "id": 5,
+    "nome": "livro de geografia2",
+    "imagem": "https://www.moderna.com.br/lumis/portal/file/fileDownload.jsp?fileId=8A808A825EC65628015EC8408D2D58FA" ,
+    "linklivro":  "https://viewerdemo.moderna.com.br/index.html#/viewer/DIVMER17%2052/0"
+},
+{
+    "id": 6,
+    "nome": "livro de biologia",
+    "imagem": "https://www.moderna.com.br/lumis/portal/file/fileDownload.jsp?fileId=8A808A825EC65628015EC844112819AF" ,
+    "linklivro":  "https://viewerdemo.moderna.com.br/index.html#/viewer/DIVMER17%2072/0"
+},
+{
+    "id": 7,
+    "nome": "livro de quimica",
+    "imagem": "https://www.moderna.com.br/lumis/portal/file/fileDownload.jsp?fileId=8A808A82662D5E28016645322AD202B5" ,
+    "linklivro":  "https://viewerdemo.moderna.com.br/index.html#/viewer/QNOVAIS%20DEMO/0"
+}
+    ],
+
+    "cursos": [
+        {
+            "id":0,
+            "titulo": "Inglês",
+            "sinopse":"Aprenda a se comunicar em inglês, com foco em conversação, leitura e escrita.",
+            "imagem":"https://m.media-amazon.com/images/I/81OBHMK9NHS._UF894,1000_QL80_.jpg",
+            "nivel": "Básico"
+        },
+        {
+            "id":1,
+            "titulo":"Música",
+            "sinopse":"Explore teoria musical e prática instrumental para desenvolver suas habilidades artísticas.",
+            "imagem": "https://www.abramus.org.br/wp-content/uploads/2024/09/redes-sociais.jpg",
+            "nivel": "Intermediário"
+        },
+        {
+            "id":2,
+            "titulo":"Língua Portuguesa",
+            "sinopse":"Domine a língua portuguesa com estudos de gramática, interpretação e produção de textos.",
+            "imagem":"https://cdn.awsli.com.br/600x450/2731/2731905/produto/272993867/1000137253-csu631e2sl.png",
+            "nivel": "Básico"
+        },
+        {
+            "id":3,
+            "titulo":"Física",
+            "sinopse":"Compreenda as leis da natureza e aplique conceitos físicos ao mundo ao seu redor.",
+            "imagem": "https://editoraappris.com.br/wp-content/uploads/2022/05/1553691162-fabiopessoaalencar-0006822-1.jpg",
+            "nivel": "Intermediário"
+        },
+        {
+            "id":4,
+            "titulo":"Redação",
+            "sinopse":"Aprimore suas técnicas de escrita e desenvolva redações criativas e argumentativas.",
+            "imagem":"https://fundacaonazare.com.br/wp-content/uploads/2021/01/WhatsApp-Image-2020-01-13-at-08_55_56.jpeg",
+            "nivel": "Básico"
+        },
+        {
+            "id":5,
+            "titulo":"Geografia",
+            "sinopse":"Entenda o planeta e suas dinâmicas sociais, físicas e econômicas.",
+            "imagem": "https://www.ourinhos.unesp.br/Home/ensino/pos-graduacao/latosensu/ensinogeografia/especializacao-em-ensino-de-geografia-2.jpeg",
+            "nivel": "Intermediário"
+        },
+        {
+            "id":6,
+            "titulo":"Educação Física",
+            "sinopse": "Mantenha o corpo ativo e saudável com atividades físicas e esportes.",
+            "imagem":"https://icsez.ufam.edu.br/images/artigos/banner_ed_fisica_1.jpg",
+            "nivel": "Avançado"
+        },
+        {
+            "id":7,
+            "titulo":"Química",
+            "sinopse":"Explore as propriedades das substâncias e as reações que transformam a matéria.",
+            "imagem": "https://loja.universidadedaquimica10x.com.br/wp-content/uploads/2024/05/1.png",
+            "nivel": "Avançado"
+        }
+
+    ]
+}
