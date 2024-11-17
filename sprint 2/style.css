@@ -1,0 +1,93 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+#linhaCarrossel {
+    margin-top: 40px;
+}
+
+#categoria {
+    background-color: greenyellow;
+    color: black;
+}
+
+#categoria:hover {
+    background-color: deepskyblue;
+}
+
+#btn-cadastro {
+    background-color: greenyellow;
+    color: white;
+}
+
+#btn-cadastro:hover {
+    background-color: rgb(146, 223, 31);
+    color: white;
+}
+
+.dropdown-menu.dropdown-center {
+    transform: translate(-50%, 0);
+    /* Centraliza horizontalmente */
+    left: 50%;
+    /* Posiciona em relação ao centro do botão */
+}
+
+#botoes {
+    display: flex;
+    right: 0;
+    display: flex;
+    flex: 1;
+    min-width: 34vh;
+    position: absolute;
+    top: 5;
+}
+
+#letrinha {
+    font-size: 12px;
+}
+
+#tituloCarrossel{
+    font-size: 35px;
+}
+#caixa {
+    position: absolute;
+    width: 40%;
+    left: 0;
+    margin-left: 25px;
+    top: 40%;
+    z-index: 2;
+}
+.carousel-item {
+    position: relative; /* Permite posicionar elementos internos de forma absoluta */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Película preta com 60% de opacidade */
+    z-index: 1; /* Certifica que está acima da imagem */
+  }
+  
+  .carousel-item img {
+    position: relative;
+    z-index: 0; /* Mantém a imagem atrás da película */  
+}
+#assistir:hover{
+   color:red;
+}
+
+
+
+    
+@media screen and (max-width:1450px) {
+    /* Estilos específicos para a condição */
+    #linhaVideos {
+        
+    }
+     
+    
+  }
