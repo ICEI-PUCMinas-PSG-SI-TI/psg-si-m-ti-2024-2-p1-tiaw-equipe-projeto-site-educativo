@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="../assets/css/login.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <script src="./scripts/login.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Olá Novamente!</h2>
+                <p class="description description-primary">Faça Login com sua conta</p>
+                <p class="description description-primary">para acessar nosso mundo!</p>
+                <button id="signin" class="btn btn-primary">Logar</button>
+            </div>    
+            <div class="second-column">
+                <h2 class="title title-second">Criar Conta</h2>
+                <div class="social-media">
+                    <ul class="list-social-media">
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-facebook-f"></i>        
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-media" href="#">
+                            <li class="item-social-media">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- social media -->
+                <p class="description description-second">ou use o seu email para registrar</p>
+                <form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="text" name="txt_login" id="txt_login" placeholder="Usuario">
+                    </label>
+                    
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="text" name="txt_nome" id="txt_nome" placeholder="Nome Completo">
+                    </label>
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="text" name="txt_email" id="txt_email" placeholder="Email">
+                    </label>
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" name="txt_senha" id="txt_senha" placeholder="Senha">
+                    </label>
+                    
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" name="txt_senha2" id="txt_senha2" placeholder="Confirme a Senha">
+                    </label>
+                    <button type="button" id="btn_salvr" class="btn btn-second">salvar</button>
+                     
+                </form>
+            </div><!-- second column -->
+        </div><!-- first content -->
+        <div class="content second-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Não tem cadastro?</h2>
+                <p class="description description-primary">Faça o cadastro em nosso site agora</p>
+                <p class="description description-primary">e não perca nada!</p>
+                <button id="signup" class="btn btn-primary">inscrever</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-secondAZUL">Faça Login</h2>
+                <div class="social-mediaAZUL">
+                    <ul class="list-social-mediaAZUL">
+                        <a class="link-social-mediaAZUL" href="#">
+                            <li class="item-social-mediaAZUL">
+                                <i class="fab fa-facebook-f"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-mediaAZUL" href="#">
+                            <li class="item-social-mediaAZUL">
+                                <i class="fab fa-google-plus-g"></i>
+                            </li>
+                        </a>
+                        <a class="link-social-mediaAZUL" href="#">
+                            <li class="item-social-mediaAZUL">
+                                <i class="fab fa-linkedin-in"></i>
+                            </li>
+                        </a>
+                    </ul>
+                </div><!-- social media -->
+                <p class="description description-second">ou use o seu email:</p>
+                <form id="login-form" class="form" method="post" onsubmit="loginUser (this)">
+                
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="text" name="username" id="username" placeholder="Usuario">
+                    </label>
+                
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" name="password" id="password" placeholder="Senha">
+                    </label>
+                
+                    <a class="password" href="#">Esqueceu a Senha? </a>
+                    <button type="button" id="btn_login" class="btn btn-secondAZUL">Entrar</button>
+                        
+                    
+                </form>
+            </div><!-- second column -->
+        </div><!-- second-content -->
+    </div>
+</body>
+</html>
+<script>
+    
+    // Associa a funçao processaFormLogin  formulário adicionado um manipulador do evento submit
+    document.getElementById ('btn_login').addEventListener ('click', processaFormLogin); 
+
+
+    // Associar salvamento ao botao
+    document.getElementById ('btn_salvar').addEventListener ('click', salvaLogin);      
+
+
+</script>
+   <script src="../assets/css/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+</body>
+</html>
