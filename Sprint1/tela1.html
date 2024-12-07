@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chat Privado - Professores e Alunos</title>
+</head>
+<body>
+    <div class="dropdown">
+        <select id="selecaoCurso">
+            <option value="">Selecionar curso</option>
+            <option value="matematica">Matemática</option>
+            <option value="portugues">Português</option>
+            <option value="historia">História</option>
+        </select>
+    </div>
+    <div class="chat-container">
+        <div class="painel-lateral" id="painelLateral"></div>
+        <div class="mensagens-container">
+            <div class="lista-mensagens" id="listaMensagens"></div> >
+            <div class="container-input">
+                <input type="text" id="entradaMensagem" placeholder="Digite sua mensagem...">
+                <button id="botaoEnviar">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
