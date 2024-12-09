@@ -1,0 +1,45 @@
+{
+    "interface": {
+      "logo": {
+        "function": "voltaAoInicio",
+        "description": "Logo funcional que volta ao início da tela."
+      },
+      "usuario": {
+        "perfil": {
+          "function": "editarInformacoes",
+          "description": "Encaminha para a tela de edição de informações e dados pessoais."
+        }
+      },
+      "navegacao": {
+        "home": {
+          "function": "irParaTelaInicial",
+          "description": "Encaminha para a tela inicial."
+        },
+        "blocosSalvos": {
+          "function": "visualizarBlocos",
+          "description": "Exibe os blocos de aulas que o aluno está realizando."
+        },
+        "biblioteca": {
+          "function": "irParaBiblioteca",
+          "description": "Encaminha o usuário para a aba da biblioteca."
+        }
+      },
+      "videoAula": {
+        "campoVideo": {
+          "description": "Campo do determinado vídeo aula."
+        },
+        "avaliacao": {
+          "porEstrelas": {
+            "description": "Campo onde o usuário avaliará a aula assistida a partir de quantidade de estrelas."
+          },
+          "porComentario": {
+            "description": "Espaço onde o usuário poderá deixar suas considerações sobre a vídeo aula assistida."
+          }
+        },
+        "botaoEnvio": {
+          "function": "enviarAvaliacoes",
+          "description": "Botão onde o usuário clicará quando todas as avaliações forem atribuídas."
+        }
+      }
+    }
+  }

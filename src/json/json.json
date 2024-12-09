@@ -1,0 +1,227 @@
+{
+
+    "videosCarrossel":[
+        {
+            "id": 0,
+            "titulo": "After Enem Dia 1 - Prof.Noslen",
+            "texto": "Fala, moçada, o Portal VEM DE ENEM e o Prof. NOSLEN (do maior canal de educação no YouTube Brasil 🇧🇷) estão juntos para te ajudar a dar aquele gás na reta final! Nos domingos, 03 e 10/11, teremos correções ao vivo das questões do ENEM e comentários exclusivos para você aprimorar suas estratégias e garantir o melhor desempenho! ⭐️",
+            "frame": "https://i.ytimg.com/vi/DzsKkL_8Dxk/maxresdefault.jpg",
+            "link": "https://www.youtube.com/live/DzsKkL_8Dxk?si=FG8ssATpeyqgT9Pp",
+            "categoria": "Português",
+            "iframeSRC": "https://www.youtube.com/embed/DzsKkL_8Dxk?si=_ws7h8XSzRtIiHNo"
+
+
+
+        },
+        {
+            "id": 1,
+            "titulo": "Exercicios de Compreensão de textos [Enem]- Prof.Noslen",
+            "texto": "O Professor Noslen vai te mostrar como as bancas do ENEM elaboram as questões de compreensão de textos, com exemplos reais da prova de 2023. Você vai ter acesso a dicas matadoras para otimizar seu tempo na prova e garantir que você consiga responder todas as questões.",
+            "frame": "https://i.ytimg.com/vi/XgiubkEAqdo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCO7VKZrLIdBS83IW9uaJKLs7yB1g",
+            "link": "https://youtu.be/XgiubkEAqdo?si=wLoZDZsqPMvxUIh1",
+            "categoria": "Português",
+            "iframeSRC": "https://www.youtube.com/embed/XgiubkEAqdo?si=CWjU07qi29I-NTSs"
+            
+        },
+        {
+            "id": 2,
+            "titulo": "Como fazer a INTRODUÇÂO perfeita para o ENEM - Prof.Noslen",
+            "texto": "Tá ligado que a introdução da redação do ENEM é o primeiro passo pra conquistar a nota 1000? Nesse vídeo, eu vou te mostrar, passo a passo, como construir uma introdução que deixa qualquer corretor babando!",
+            "frame": "https://i.ytimg.com/vi/WfP2bl5xb5E/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCOmCTzTVqQX-UFzaxqW2XGfaQqJQ",
+            "link": "https://youtu.be/WfP2bl5xb5E?si=EKkU013o7tBpQ5EI",
+            "categoria": "Português",
+            "iframeSRC":"https://www.youtube.com/embed/WfP2bl5xb5E?si=uJpHwboiaUnAWtI1"
+        },
+        {
+            "id": 3,
+            "titulo": "Simple Present . Correção - Prof.Rui Ventura",
+            "texto": "Nesta aula você poderá corrigir as atividades da aula sobre Simple Present, entender a estrutura e uso correto do presente simples em Inglês e ainda treinar a pronúncia.",
+            "frame": "https://i.ytimg.com/vi/TTN2ZqLU-pU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLABP3HfvMs1cIBm9-_QvsHghcLTLA",
+            "link": "https://youtu.be/TTN2ZqLU-pU?si=ri4ozZ50mdW4Ehn5",
+            "categoria": "Inglês",
+            "iframeSRC": "https://www.youtube.com/embed/TTN2ZqLU-pU?si=RRbaLSDv340GC9Rv"
+        },
+        {
+            "id": 4,
+            "titulo": "Days of the Week - Prof.Rui Ventura",
+            "texto": "Na aula de inglês com o professor Rui Ventura, você vai aprender os dias da semana de um jeito leve e divertido! Com dicas práticas e descontraídas, ele facilita a memorização e ajuda a fixar o conteúdo no seu dia a dia.",
+            "frame": "https://i.ytimg.com/vi/f5oTdtf0RC0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDDNfXOcgE-yNJII3h3GworwKdNgg",
+            "link": "https://youtu.be/f5oTdtf0RC0?si=Gv7G4NOquuSxoLre",
+            "categoria": "Inglês",
+            "iframeSRC": "https://www.youtube.com/embed/f5oTdtf0RC0?si=V9xUtumDbMx46ukf"
+        },
+        {
+            "id": 5,
+            "titulo": "Greetings - Prof.Rui Ventura",
+            "texto": "Na aula de inglês com o professor Rui Ventura, você vai dominar os greetings e aprender a cumprimentar como um verdadeiro falante! Com seu jeito leve e prático, ele ensina as saudações para diferentes ocasiões, sempre com um toque de diversão.",
+            "frame": "https://i.ytimg.com/vi/qCvW_afKadw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCea04eQPzyfDsBYPAFs6T_0QZAbA",
+            "link": "https://youtu.be/qCvW_afKadw?si=Atr9k31yU0BsrpWh",
+            "categoria": "Inglês",
+            "iframeSRC": "https://www.youtube.com/embed/qCvW_afKadw?si=OhQXqN8WhOB3Wx7I"
+        }
+
+
+    ],
+    
+    "livrosdigitais": [
+{
+    "id": 0,
+    "nome": "livro de geografia",
+    "imagem": "https://imagens.disal.com.br/produtos/ampliada/5629837.jpg" ,
+    "linklivro":  "https://viewerdemo.moderna.com.br/index.html#/viewer/ARPGEOG5E%20DEMO/2bdf8eca956ebab05dd8704d86c411cb"
+},
+{
+    "id": 1,
+    "nome": "livro de ciências",
+    "imagem": "https://imagens.disal.com.br/produtos/ampliada/5638879.jpg" ,
+    "linklivro":  "https://viewerdemo.moderna.com.br/index.html#/viewer/ARPCIEN5E%20DEMO/1adc47f68aebcb61b91fe833c499a0ee"
+},
+{
+    "id": 2,
+    "nome": "livro de matemática",
+    "imagem": "https://imagens.disal.com.br/produtos/ampliada/4318024.jpg" ,
+    "linklivro":  "https://viewerdemo.moderna.com.br/index.html#/viewer/BUPMATE1E%20DEMO/1"
+},
+{
+    "id": 3,
+    "nome": "livro de portuguêS",
+    "imagem": "https://m.media-amazon.com/images/I/61QdFtxMroL._AC_UF894,1000_QL80_.jpg" ,
+    "linklivro":  "https://viewerdemo.moderna.com.br/index.html#/viewer/ARPGEOG5E%20DEMO/2bdf8eca956ebab05dd8704d86c411cb"
+},
+{
+    "id": 4,
+    "nome": "livro de matemática",
+    "imagem": "https://imagens.disal.com.br/produtos/ampliada/5629837.jpg" ,
+    "linklivro":  "https://viewerdemo.moderna.com.br/index.html#/viewer/BUPPORT1E%20DEMO/1"
+},
+{
+    "id": 5,
+    "nome": "livro de geografia2",
+    "imagem": "https://www.moderna.com.br/lumis/portal/file/fileDownload.jsp?fileId=8A808A825EC65628015EC8408D2D58FA" ,
+    "linklivro":  "https://viewerdemo.moderna.com.br/index.html#/viewer/DIVMER17%2052/0"
+},
+{
+    "id": 6,
+    "nome": "livro de biologia",
+    "imagem": "https://www.moderna.com.br/lumis/portal/file/fileDownload.jsp?fileId=8A808A825EC65628015EC844112819AF" ,
+    "linklivro":  "https://viewerdemo.moderna.com.br/index.html#/viewer/DIVMER17%2072/0"
+},
+{
+    "id": 7,
+    "nome": "livro de quimica",
+    "imagem": "https://www.moderna.com.br/lumis/portal/file/fileDownload.jsp?fileId=8A808A82662D5E28016645322AD202B5" ,
+    "linklivro":  "https://viewerdemo.moderna.com.br/index.html#/viewer/QNOVAIS%20DEMO/0"
+}
+    ],
+
+    "cursos": [
+        {
+            "id":0,
+            "titulo": "Inglês",
+            "sinopse":"Curso focado no aprendizado completo da língua inglesa, incluindo vocabulário, gramática, conversação e compreensão auditiva para fluência prática. ",
+            "imagem":"https://shkola6kogalym-r86.gosweb.gosuslugi.ru/netcat_files/generated/68/109/210x265/35/e20bfbdf5757e130138a86851e0a6be1.jpg?crop=0%3A0%3A0%3A0&hash=bbec33508503beef17698e1ebcbbe7cf&resize_mode=1&wm_m=0&scale=4",
+            "nivel": "Básico"
+        },
+        {
+            "id":1,
+            "titulo":"Música",
+            "sinopse":"Aulas voltadas para a teoria musical, prática de instrumentos e desenvolvimento de habilidades, como leitura, composição e performance ao vivo.",
+            "imagem": "https://images.pexels.com/photos/3357078/pexels-photo-3357078.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "nivel": "Intermediário"
+        },
+        {
+            "id":2,
+            "titulo":"Língua Portuguesa",
+            "sinopse":" Estudo aprofundado da língua portuguesa, abordando gramática, ortografia, interpretação de textos e produção textual com ênfase na clareza.",
+            "imagem":"https://images.pexels.com/photos/29393752/pexels-photo-29393752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "nivel": "Básico"
+        },
+        {
+            "id":3,
+            "titulo":"Física",
+            "sinopse":"Curso que explora os conceitos básicos, intermediários e avançados da física, suas leis fundamentais e as aplicações no mundo cotidiano e científico.",
+            "imagem": "https://lfeditorial.com.br/wp-content/uploads/2024/09/9786555634754-scaled.jpg",
+            "nivel": "Intermediário"
+        },
+        {
+            "id":4,
+            "titulo":"Redação",
+            "sinopse":"Desenvolva sua capacidade de argumentação, coerência e coesão textual, aprendendo técnicas essenciais para uma redação clara e objetiva.",
+            "imagem":"https://images.pexels.com/photos/1394646/pexels-photo-1394646.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "nivel": "Básico"
+        },
+        {
+            "id":5,
+            "titulo":"Geografia",
+            "sinopse":"Estudo das relações espaciais entre o ser humano e o meio ambiente, abordando tópicos como geopolítica, clima e recursos naturais.",
+            "imagem": "https://images.pexels.com/photos/3994840/pexels-photo-3994840.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "nivel": "Intermediário"
+        },
+        {
+            "id":6,
+            "titulo":"Educação Física",
+            "sinopse": "Curso que foca em atividades físicas, esportes e técnicas de treinamento para melhorar o condicionamento físico e promover a saúde geral.",
+            "imagem":"https://images.pexels.com/photos/7207370/pexels-photo-7207370.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "nivel": "Avançado"
+        },
+        {
+            "id":7,
+            "titulo":"Química",
+            "sinopse":"Estudo da composição, propriedades e reações das substâncias químicas, com ênfase em suas aplicações práticas em diversos setores industriais.",
+            "imagem": "https://images.pexels.com/photos/8539949/pexels-photo-8539949.jpeg?auto=compress&cs=tinysrgb&w=600",
+            "nivel": "Avançado"
+        }
+
+    ],
+
+    "amostravideos": [
+    {
+        "id": 0,
+        "nome": "video 0",
+        "iframe":"https://www.youtube.com/embed/S45kHeWnT0M?si=QAgZ2_pA-9xq-F5r&amp;controls=0"
+    },
+
+    {
+        "id": 1,
+        "nome": "video 1",
+        "iframe": "https://www.youtube.com/embed/GJC9zdMG1UQ?si=GoZ4mKvkFDLZLshv"
+    },
+
+    {
+        "id": 2,
+        "nome": "video 2",
+        "iframe": "https://www.youtube.com/embed/AZpATHMLEbQ?si=VCy9t_Txkmk95deF"
+    },
+
+    {
+        "id": 3,
+        "nome": "video 3",
+        "iframe": "https://www.youtube.com/embed/SPZqQ5qn3P0?si=0HH43dpMDAHBaQMB"
+    },
+
+    {
+        "id": 4,
+        "nome": "video 4",
+        "iframe": "https://www.youtube.com/embed/Z8cVL_5WUYQ?si=GXe-PT4BhyUHWTYp"
+    },
+
+    {
+        "id": 5,
+        "nome": "video 5",
+        "iframe": "https://www.youtube.com/embed/dU14qCv5AuI?si=8C5ONjGdUHSifYxF"
+    },
+
+    {
+        "id": 6,
+        "nome": "video 6",
+        "iframe": "https://www.youtube.com/embed/XCZyx2IHdxA?si=Gdl0opLxPtOJAWsK"
+    },
+
+    {
+        "id": 7,
+        "nome": "video 7",
+        "iframe": "https://www.youtube.com/embed/qGFPYY-yb_0?si=iFhAdyI2N_wmGJIK"
+    }
+
+    ]
+}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Inglês</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/conteudocurso.css?resetcache">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            cursor: pointer;
+            display: none;
+        }
+        
+        .whatsapp-button:hover {
+            background-color: #1ebe57;
+        }
+        
+        .whatsapp-icon {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <a id="whatsappButton" class="whatsapp-button" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <div id="barra-lateral"></div>
+
+    <main>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+
+            </div>
+            <div class="carousel-inner">
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="menu-button">
+            <button id="menuToggle">Menu ▼</button>
+        </div>
+        <div class="grid" id="aulas-curso">
+
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const barraLateralContainer = document.getElementById('barra-lateral');
+
+            fetch('barralateral.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Erro ao carregar a barra lateral: ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    barraLateralContainer.innerHTML = html;
+
+                    barraLateralContainer.querySelectorAll("script").forEach(script => {
+                        const newScript = document.createElement("script");
+                        newScript.textContent = script.textContent;
+                        document.body.appendChild(newScript);
+                        script.remove();
+                    });
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar a barra lateral:', error);
+                });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const aulasCursoContainer = document.getElementById('aulas-curso');
+            const carouselInner = document.querySelector('.carousel-inner');
+            const carouselIndicators = document.querySelector('.carousel-indicators');
+
+            // Obter o ID do curso da URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const cursoId = urlParams.get('id');
+
+            if (!cursoId) {
+                aulasCursoContainer.innerHTML = '<p class="text-danger">ID do curso não fornecido na URL.</p>';
+                return;
+            }
+
+            // Buscar informações do curso no JSON Server
+            fetch(`http://localhost:3000/cursos?id=${cursoId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Erro ao buscar curso: ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then(cursos => {
+                    if (cursos.length === 0) {
+                        aulasCursoContainer.innerHTML = '<p class="text-warning">Curso não encontrado.</p>';
+                        return;
+                    }
+
+                    const curso = cursos[0];
+
+                    // Renderizar o slide principal com informações do curso
+                    const courseSlide = `
+                        <div class="carousel-item active">
+                            <img src="${curso.thumbnail_url}" class="d-block w-100" alt="${curso.titulo}">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>${curso.titulo}</h5>
+                                <p>${curso.descricao}</p>
+                            </div>
+                        </div>
+                    `;
+
+                    // Adicionar slide ao carrossel
+                    carouselInner.insertAdjacentHTML('beforeend', courseSlide);
+
+                    // Adicionar indicador ao carrossel
+                    const courseIndicator = `
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    `;
+                    carouselIndicators.insertAdjacentHTML('beforeend', courseIndicator);
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar curso:', error);
+                    aulasCursoContainer.innerHTML = '<p class="text-danger">Erro ao carregar informações do curso.</p>';
+                });
+
+            // Buscar vídeos relacionados ao curso no JSON Server
+            fetch(`http://localhost:3000/videos?id_curso=${cursoId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Erro ao buscar vídeos: ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then(videos => {
+                    if (videos.length === 0) {
+                        aulasCursoContainer.innerHTML = '<p class="text-warning">Nenhum vídeo encontrado para este curso.</p>';
+                        return;
+                    }
+
+
+
+
+                    // Renderizar os vídeos como cards abaixo do carrossel
+                    videos.forEach(video => {
+                        const videoCard = `
+                            <div class="card mb-3">
+                                <iframe id="link" src="${video.link}" allowfullscreen></iframe>
+                                <h3 id="aula-title">${video.titulo}</h3>
+                                <p id="aula-descricao">${video.descricao}</p>
+                                <a href="http://localhost/app-tiaw/feedback.html?id=${video.id}" class="btn btn-primary">Assistir</a>
+                            </div>
+                        `;
+                        aulasCursoContainer.insertAdjacentHTML('beforeend', videoCard);
+                    });
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar vídeos:', error);
+                    aulasCursoContainer.innerHTML = '<p class="text-danger">Erro ao carregar vídeos.</p>';
+                });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const aulasCursoContainer = document.getElementById('aulas-curso');
+            const carouselInner = document.querySelector('.carousel-inner');
+            const carouselIndicators = document.querySelector('.carousel-indicators');
+            const whatsappButton = document.getElementById('whatsappButton');
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const cursoId = urlParams.get('id');
+
+            if (!cursoId) {
+                aulasCursoContainer.innerHTML = '<p class="text-danger">ID do curso não fornecido na URL.</p>';
+                return;
+            }
+
+            // Buscar informações do curso no JSON Server
+            fetch(`http://localhost:3000/cursos?id=${cursoId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Erro ao buscar curso: ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then(cursos => {
+                    if (cursos.length === 0) {
+                        aulasCursoContainer.innerHTML = '<p class="text-warning">Curso não encontrado.</p>';
+                        return;
+                    }
+
+                    const curso = cursos[0];
+
+                    // Renderizar o slide principal com informações do curso
+                    const courseSlide = `
+                        <div class="carousel-item active">
+                            <img src="${curso.thumbnail_url}" class="d-block w-100" alt="${curso.titulo}">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>${curso.titulo}</h5>
+                                <p>${curso.descricao}</p>
+                            </div>
+                        </div>
+                    `;
+
+                    // Adicionar slide ao carrossel
+                    carouselInner.insertAdjacentHTML('beforeend', courseSlide);
+
+                    // Adicionar indicador ao carrossel
+                    const courseIndicator = `
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    `;
+                    carouselIndicators.insertAdjacentHTML('beforeend', courseIndicator);
+
+                    // Configurar o botão do WhatsApp se o ID do grupo estiver presente
+                    if (curso.id_grupo) {
+                        whatsappButton.href = `https://chat.whatsapp.com/${curso.id_grupo}`;
+                        whatsappButton.style.display = 'flex';
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar curso:', error);
+                    aulasCursoContainer.innerHTML = '<p class="text-danger">Erro ao carregar informações do curso.</p>';
+                });
+
+            // Buscar vídeos relacionados ao curso no JSON Server
+            fetch(`http://localhost:3000/videos?id_curso=${cursoId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Erro ao buscar vídeos: ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then(videos => {
+                    if (videos.length === 0) {
+                        aulasCursoContainer.innerHTML = '<p class="text-warning">Nenhum vídeo encontrado para este curso.</p>';
+                        return;
+                    }
+
+                    // Renderizar os vídeos como cards abaixo do carrossel
+                    videos.forEach(video => {
+                        const videoCard = `
+                            <div class="card mb-3">
+                                <iframe id="link" src="${video.link}" allowfullscreen></iframe>
+                                <h3 id="aula-title">${video.titulo}</h3>
+                                <p id="aula-descricao">${video.descricao}</p>
+                                <a href="http://localhost/app-tiaw/feedback.html?id=${video.id}" class="btn btn-primary">Assistir</a>
+                            </div>
+                        `;
+                        aulasCursoContainer.insertAdjacentHTML('beforeend', videoCard);
+                    });
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar vídeos:', error);
+                    aulasCursoContainer.innerHTML = '<p class="text-danger">Erro ao carregar vídeos.</p>';
+                });
+        });
+    </script>
+
+
+
+
+    <script src="js/appconteudocurso.js"></script>
+    <script src="carousel.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+.main-content {
+    flex: 1;
+    padding: 30px;
+    min-width: 0;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.header h3 {
+    color: #0078d4;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.header h2 {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.header p {
+    font-size: 18px;
+    color: #555;
+}
+
+.video-player {
+    margin: 20px 0;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.feedback-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-section h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.feedback-section p {
+    margin-bottom: 10px;
+}
+
+.rating {
+    margin-bottom: 10px;
+}
+
+.star {
+    font-size: 30px;
+    color: #e4e4e4;
+    cursor: pointer;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #0078d4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+@media (max-width: 1024px) {
+    .header h1 {
+        font-size: 24px;
+    }
+    .header h2 {
+        font-size: 20px;
+    }
+    .video-player iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 15px;
+    }
+    .header h1 {
+        font-size: 22px;
+    }
+    .header h2 {
+        font-size: 18px;
+    }
+    .video-player iframe {
+        height: 200px;
+    }
+    .feedback-section {
+        padding: 15px;
+    }
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 20px;
+    }
+    .header h2 {
+        font-size: 16px;
+    }
+    .video-player iframe {
+        height: 180px;
+    }
+    .feedback-section h3 {
+        font-size: 18px;
+    }
+    .star {
+        font-size: 24px;
+    }
+    button {
+        font-size: 16px;
+        padding: 8px;
+    }
+}

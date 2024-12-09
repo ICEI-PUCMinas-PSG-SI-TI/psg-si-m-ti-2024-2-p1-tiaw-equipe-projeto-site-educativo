@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.postzin {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.text-body-secondary {
+    color: #ffffff;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    text-shadow: 1px 1px 5px #2077b9;
+}
+
+body {
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased !important;
+    padding: 20px;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background: #23a0ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.4);
+}
+
+.main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+div.newPost {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0;
+    padding: 25px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.05);
+}
+
+div.infoUser {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+div.imgUser {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #333;
+}
+
+.close {
+    border: none;
+    background-color: transparent;
+    font-size: larger;
+    color: #f0f0f0;
+    width: 100px;
+}
+
+.close:hover {
+    color: #727272;
+}
+
+strong {
+    font-size: 16px;
+    color: #23a0ff;
+    margin-left: 10px;
+}
+
+strong {
+    font-size: 16px;
+    color: #23a0ff;
+    margin-left: 10px;
+}
+
+form.formPost {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.escrev {
+    background: #fbfbfb;
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    resize: none;
+    outline: none;
+    font-weight: bold;
+    color: #727272;
+    font-family: Arial, sans-serif;
+}
+
+#url-foto:focus {
+    border: 2px solid #23a0ff;
+}
+
+textarea:focus {
+    border: 2px solid #23a0ff;
+}
+
+.btn {
+    width: 35%;
+    height: 30%;
+    padding: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    transition: all .5s ease;
+}
+
+.btn--doar {
+    color: #fff;
+    padding-right: 0;
+    background-color: #c0392b;
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 90% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 0 100%);
+}
+
+.btn--comment {
+    color: #fff;
+    padding-right: 0;
+    background-color: #2b6ec0;
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 70%, 90% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 75% 100%, 0 100%);
+}
+
+.btn--doar:hover {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
+}
+
+.btn--comment:hover {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
+}
+
+.btn--doar:after {
+    content: "\f004";
+    color: #e74c3c;
+    font-family: FontAwesome;
+    display: inline-block;
+    position: relative;
+    right: -55px;
+    transition: all 0.2s ease;
+}
+
+.btn--comment:after {
+    content: "\f075";
+    color: #2b6ec0;
+    font-family: FontAwesome;
+    display: inline-block;
+    position: relative;
+    right: -55px;
+    transition: all 0.2s ease;
+}
+
+.btn--doar:hover:after {
+    margin: -5px 15px;
+    right: 0px;
+}
+
+.btn--comment:hover:after {
+    margin: -5px 15px;
+    right: 0px;
+}
+
+div.iconsAndButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button.btnSubmitForm:hover {
+    background: rgb(8, 138, 236);
+}
+
+button.btnSubmitForm {
+    background: #23a0ff;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background 0.2s;
+    border: 0;
+    cursor: pointer;
+}
+
+#imageUpload {
+    display: none;
+}
+
+.btnFileForm {
+    width: 40px;
+    transition: background 0.2s;
+    text-align: center;
+    font-size: 28px;
+    height: 40px;
+    background-color: #23a0ff;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.btnFileForm:hover {
+    background-color: #2077b9;
+}
+
+.post-image {
+    margin: auto;
+    width: 100%;
+    max-width: 480px;
+    max-height: 400px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+button#resetButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button#resetButton:hover {
+    background-color: #c82333;
+}

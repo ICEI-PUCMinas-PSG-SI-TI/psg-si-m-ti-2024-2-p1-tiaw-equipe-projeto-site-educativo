@@ -1,0 +1,163 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "João",
+      "email": "joao@email.com",
+      "senha": "123456",
+      "login": "joao"
+    },
+    {
+      "id": "2",
+      "nome": "Maria",
+      "email": "maria@email.com",
+      "senha": "abcdef",
+      "login": "mariazinha"
+    },
+    {
+      "id": "7bd6",
+      "nome": "joaojoao",
+      "email": "joao@joao.com",
+      "senha": "123123",
+      "login": "joaojoao"
+    }
+  ],
+  "videos": [
+    {
+      "id": "5ac9",
+      "titulo": "Inglês: Módulo 1",
+      "id_curso": "e768",
+      "link": "https://www.youtube.com/embed/QoTfOVYXmUc?si=iKGcr_G6cqZqQkfE",
+      "descricao": "Você está preparado para o seu novo Curso em Vídeo de Inglês? Sabe o que vamos aprender..."
+    },
+    {
+      "id": "5bc9",
+      "titulo": "Inglês: Módulo 2",
+      "id_curso": "e768",
+      "link": "https://www.youtube.com/embed/QoTfOVYXmUc?si=iKGcr_G6cqZqQkfE",
+      "descricao": "Você está preparado para o seu novo Curso em Vídeo de Inglês? Sabe o que vamos aprender..."
+    },
+    {
+      "id": "5cc9",
+      "titulo": "Inglês: Módulo 3",
+      "id_curso": "e768",
+      "link": "https://www.youtube.com/embed/QoTfOVYXmUc?si=iKGcr_G6cqZqQkfE",
+      "descricao": "Você está preparado para o seu novo Curso em Vídeo de Inglês? Sabe o que vamos aprender..."
+    },
+    {
+      "id": "5dc9",
+      "titulo": "Inglês: Módulo 4",
+      "id_curso": "e768",
+      "link": "https://www.youtube.com/embed/QoTfOVYXmUc?si=iKGcr_G6cqZqQkfE",
+      "descricao": "Você está preparado para o seu novo Curso em Vídeo de Inglês? Sabe o que vamos aprender..."
+    },
+    {
+      "id": "5ec9",
+      "titulo": "Inglês: Módulo 5",
+      "id_curso": "e768",
+      "link": "https://www.youtube.com/embed/QoTfOVYXmUc?si=iKGcr_G6cqZqQkfE",
+      "descricao": "Você está preparado para o seu novo Curso em Vídeo de Inglês? Sabe o que vamos aprender..."
+    },
+    {
+      "id": "5fc9",
+      "titulo": "Inglês: Módulo 6",
+      "id_curso": "e768",
+      "link": "https://www.youtube.com/embed/QoTfOVYXmUc?si=iKGcr_G6cqZqQkfE",
+      "descricao": "Você está preparado para o seu novo Curso em Vídeo de Inglês? Sabe o que vamos aprender..."
+    },
+    {
+      "id": "e0e8",
+      "titulo": "Titulo da aula",
+      "id_curso": "ac61",
+      "link": "https://www.youtube.com/embed/QoTfOVYXmUc?si=iKGcr_G6cqZqQkfE",
+      "descricao": "Você está preparado para o seu novo Curso em Vídeo de Inglês? Sabe o que vamos aprender..."
+    },
+    {
+      "id": "adb1",
+      "titulo": "Titulo 2",
+      "id_curso": "ac61",
+      "link": "https://www.youtube.com/embed/QoTfOVYXmUc?si=iKGcr_G6cqZqQkfE",
+      "descricao": "Você está preparado para o seu novo Curso em Vídeo de Inglês? Sabe o que vamos aprender..."
+    },
+    {
+      "id": "887c",
+      "titulo": "Titulo 3",
+      "id_curso": "ac61",
+      "link": "https://www.youtube.com/embed/QoTfOVYXmUc?si=iKGcr_G6cqZqQkfE",
+      "descricao": "Você está preparado para o seu novo Curso em Vídeo de Inglês? Sabe o que vamos aprender..."
+    },
+    {
+      "id": "d0bd",
+      "titulo": "Aula 1",
+      "id_curso": "3915",
+      "link": "https://www.youtube.com/embed/g_R_Asf6Co0?si=cmJJZtJ-zo82Bown",
+      "descricao": "Fala Impressionadores! Hoje nós vamos dar início ao Curso Básico de Python 2024 para que você possa sair do zero em P..."
+    }
+  ],
+  "feedbacks": [
+    {
+      "id": "1",
+      "id_video": "5ac9",
+      "titulo": "Ótima aula!",
+      "descricao": "Gostei muito da explicação e dos exemplos práticos.",
+      "estrelas": 5
+    },
+    {
+      "id": "2",
+      "id_video": "5ac9",
+      "titulo": "Muito bom!",
+      "descricao": "A aula foi clara e objetiva.",
+      "estrelas": 4
+    }
+  ],
+  "cursos": [
+    {
+      "id": "e768",
+      "titulo": "Ingles Avançado",
+      "descricao": "Curso focado no aprendizado completo da língua inglesa, incluindo vocabulário, gramática, conversação e compreensão auditiva para fluência prática.",
+      "aulas": 10,
+      "thumbnail_url": "https://cdn.eadplataforma.app/client/cae318318/upload/crop/product/photo/56ba5b7ec311f87f771e6aa24dc3597e_inglesjpg.jpg-product-photo-detail.jpg",
+      "id_grupo": "ASDA"
+    },
+    {
+      "id": "49d0",
+      "titulo": "Fisica 2",
+      "descricao": "Curso que explora os conceitos básicos, intermediários e avançados da física, suas leis fundamentais e as aplicações no mundo cotidiano...",
+      "aulas": 10,
+      "thumbnail_url": "https://lfeditorial.com.br/wp-content/uploads/2024/09/9786555634754-scaled.jpg",
+      "id_grupo": "ASDA"
+    },
+    {
+      "id": "ac61",
+      "titulo": "Musica para iniciantes",
+      "descricao": "Aulas voltadas para a teoria musical, prática de instrumentos e desenvolvimento de habilidades, como leitura, composição e performance ao vivo.",
+      "aulas": 10,
+      "thumbnail_url": "https://images.pexels.com/photos/3357078/pexels-photo-3357078.jpeg?auto=compress&cs=tinysrgb",
+      "id_grupo": "ASDA"
+    },
+    {
+      "id": "6c57",
+      "titulo": "Língua Portuguesa",
+      "descricao": "Estudo aprofundado da língua portuguesa, abordando gramática, ortografia, interpretação de textos e produção textual com ênfase na clareza.",
+      "aulas": 12,
+      "thumbnail_url": "https://images.pexels.com/photos/1394646/pexels-photo-1394646.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id_grupo": "ASDA"
+    },
+    {
+      "id": "2cfd",
+      "titulo": "Redação",
+      "descricao": "Desenvolva sua capacidade de argumentação, coerência e coesão textual, aprendendo técnicas essenciais para uma redação clara e objetiva.",
+      "aulas": 11,
+      "thumbnail_url": "https://images.pexels.com/photos/29393752/pexels-photo-29393752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "id_grupo": "ASDA"
+    },
+    {
+      "id": "3915",
+      "titulo": "Curso Básico de Python",
+      "descricao": "Nessa primeira aula eu vou te dar uma breve introdução ao Python, falar o que é Python se você ainda não sabe, como instalar o Python e como baixar o VS Code",
+      "aulas": 10,
+      "thumbnail_url": "https://blog.geekhunter.com.br/wp-content/uploads/2022/02/linguagem-python-1024x579-1.jpg",
+      "id_grupo": "ABCD"
+    }
+  ]
+}

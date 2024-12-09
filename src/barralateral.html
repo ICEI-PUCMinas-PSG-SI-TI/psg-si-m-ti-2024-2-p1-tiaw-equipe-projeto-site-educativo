@@ -1,0 +1,115 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .sidebar {
+        height: 100vh;
+        position: fixed;
+    }
+    
+    main {
+        margin-left: 16.6667%;
+    }
+    
+    @media (max-width: 768px) {
+        main {
+            margin-left: 0;
+        }
+        .sidebar {
+            position: static;
+            width: 100%;
+        }
+    }
+</style>
+
+<div class="">
+    <div class="row">
+        <div class="d-md-none bg-primary text-white p-3">
+            <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar" aria-controls="mobileSidebar">
+                    Menu
+                </button>
+        </div>
+
+        <nav id="mobileSidebar" class="offcanvas offcanvas-start bg-primary text-white" tabindex="-1" aria-labelledby="mobileSidebarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="mobileSidebarLabel">Menu</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="text-center py-4">
+                    <img src="img/logo.png" alt="Logo" class="img-fluid mb-3" style="max-width: 80px;">
+                    <h5>Home</h5>
+                    <ul class="nav flex-column text-start">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Página Inicial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Biblioteca</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#">Feedbacks</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="col-md-3 col-lg-2 d-md-block bg-primary text-white sidebar d-none d-md-block">
+            <div class="text-center py-4">
+                <img src="img/logo.png" alt="Logo" class="img-fluid mb-3" style="max-width: 80px;">
+                <h5>Home</h5>
+                <img src="https://static.vecteezy.com/system/resources/previews/008/506/404/non_2x/contact-person-red-icon-free-png.png" alt="Perfil" width="50x" height="50px" id="foto_perfilAS" class="rounded-circle">
+                <h5 id="user-name">Nome</h5>
+                <ul class="nav flex-column text-start">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="cadastrar_aulas.html">Cadastrar aulas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="cadastrar_cursos.html">Cadastrar cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="biblioteca.html">Biblioteca</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="meus_cursos.html">Meus cursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="perfil.html">Perfil</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+<script>
+    const db = localStorage.getItem('db');
+    if (db) {
+        try {
+            // Converte o JSON em objeto
+            const data = JSON.parse(db);
+
+            // Atualiza a imagem do header
+            if (data.urlImagem) {
+                const logoImage = document.querySelector('img[alt="Perfil"]');
+                if (logoImage) {
+                    logoImage.src = data.urlImagem;
+                }
+            }
+
+            // Atualiza o nome do usuário abaixo da imagem
+            if (data.nome) {
+                const userNameElement = document.getElementById('user-name');
+                if (userNameElement) {
+                    userNameElement.textContent = data.nome;
+                }
+            }
+        } catch (error) {
+            console.error('Erro ao processar o JSON do localStorage:', error);
+        }
+    } else {
+        console.warn('Nenhum dado encontrado no localStorage com a chave "db".');
+    }
+</script>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Cursos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+        }
+        
+        main {
+            margin-left: 16.6667%;
+        }
+        
+        .card img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+        
+        .progress {
+            height: 8px;
+        }
+        
+        .btn-continuar {
+            background-color: #28a745;
+            color: white;
+            border: none;
+        }
+        
+        .btn-continuar:hover {
+            background-color: #218838;
+        }
+        
+        @media (max-width: 768px) {
+            main {
+                margin-left: 0;
+            }
+            .sidebar {
+                position: static;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="barra-lateral"></div>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex py-4">
+                    <h1>Meus Cursos</h1>
+                </div>
+                <hr>
+
+                <div id="meus-cursos" class="row">
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const barraLateralContainer = document.getElementById("barra-lateral");
+            const cursosContainer = document.getElementById("meus-cursos");
+
+            // Carregar a barra lateral
+            fetch("barralateral.html")
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error(
+                            `Erro ao carregar a barra lateral: ${response.statusText}`
+                        );
+                    }
+                    return response.text();
+                })
+                .then((html) => {
+                    barraLateralContainer.innerHTML = html;
+
+                    barraLateralContainer.querySelectorAll("script").forEach((script) => {
+                        const newScript = document.createElement("script");
+                        newScript.textContent = script.textContent;
+                        document.body.appendChild(newScript);
+                        script.remove();
+                    });
+                })
+                .catch((error) => {
+                    console.error("Erro ao carregar a barra lateral:", error);
+                });
+
+            // Buscar e exibir os cursos do JSON Server
+            fetch("http://localhost:3000/cursos") // Substitua pelo URL correto do seu JSON Server
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error(`Erro ao buscar cursos: ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then((cursos) => {
+                    cursos.forEach((curso) => {
+                        const cursoCard = `
+                        <div class="col-md-6 col-lg-3 mb-3">
+                            <div class="card mb-3">
+                                <img src="${curso.thumbnail_url}" class="card-img-top" alt="${curso.titulo}">
+                                <div class="card-body">
+                                    <h6 class="text-primary">${curso.aulas} Aulas</h6>
+                                    <div class="progress mb-3">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h5 class="card-title">${curso.titulo}</h5>
+                                    <p class="card-text">${curso.descricao}</p>
+                                    <a class="btn btn-continuar" href="http://localhost/app-tiaw/conteudocurso.html?id=${curso.id}">Continuar →</a>
+                                </div>
+                            </div>
+                            </div>
+                        `;
+                        cursosContainer.insertAdjacentHTML("beforeend", cursoCard); // Adiciona os cursos na div#meus-cursos
+                    });
+                })
+                .catch((error) => {
+                    console.error("Erro ao buscar cursos:", error);
+                    cursosContainer.innerHTML = '<p class="text-danger">Erro ao carregar cursos.</p>';
+                });
+        });
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

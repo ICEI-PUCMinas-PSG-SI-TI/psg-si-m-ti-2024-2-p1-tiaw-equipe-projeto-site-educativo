@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidades Ativas - Feedback</title>
+    <link rel="stylesheet" href="css/feedback-styles.css?resetcache">
+
+</head>
+
+<body>
+
+    <div id="barra-lateral"></div>
+    <div class="container">
+        <div class="main-content">
+            <div class="header">
+                <h3 id="videos-titulo">AULA 1 - TECLADO</h3>
+                <p id="videos-descricao">Nesta aula, você aprenderá os princípios básicos do teclado, incluindo a identificação dos dedos e a correta posição das mãos. Esses aspectos são fundamentais para desenvolver uma técnica eficiente, facilitando a execução das notas com
+                    fluidez e precisão. Você verá como cada dedo tem um papel específico no teclado, desde o polegar, que auxilia nos movimentos amplos e transições suaves, até o dedo mínimo, essencial para a execução de acordes e escalas. Manter as mãos
+                    relaxadas e os dedos ligeiramente curvados é crucial para evitar tensões desnecessárias e melhorar a destreza. Além disso, a prática constante de exercícios de digitação ajuda a fortalecer os dedos, permitindo tocar de forma mais eficiente
+                    e com menos esforço físico. Dominar essas técnicas garante uma execução mais limpa e melhora a velocidade e precisão, além de reduzir o risco de lesões. Para mais informações detalhadas sobre essas práticas.</p>
+            </div>
+            <iframe id="videos-feedback" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="view-feedbacks-section">
+                <h3>Feedbacks Recebidos</h3>
+                <div id="feedbacks-container"></div>
+                <button id="view-more-btn">Ver mais</button>
+            </div>
+            <link rel="stylesheet" href="css/paginadefeedback.css">
+            <script src="js/paginadefeedback.js"></script>
+
+            <div class="feedback-section">
+                <h3>Comentário</h3>
+                <p>Escreva seu Feedback aqui:</p>
+                <div class="rating">
+                    <span class="star" data-rating="1">★</span>
+                    <span class="star" data-rating="2">★</span>
+                    <span class="star" data-rating="3">★</span>
+                    <span class="star" data-rating="4">★</span>
+                    <span class="star" data-rating="5">★</span>
+                </div>
+                <textarea id="comment" rows="4" placeholder="Escreva seu comentário..."></textarea>
+                <button id="submit-btn">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const barraLateralContainer = document.getElementById('barra-lateral');
+
+            fetch('barralateral.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Erro ao carregar a barra lateral: ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    barraLateralContainer.innerHTML = html;
+
+                    barraLateralContainer.querySelectorAll("script").forEach(script => {
+                        const newScript = document.createElement("script");
+                        newScript.textContent = script.textContent;
+                        document.body.appendChild(newScript);
+                        script.remove();
+                    });
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar a barra lateral:', error);
+                });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const videoTitulo = document.getElementById('videos-titulo');
+            const videoDescricao = document.getElementById('videos-descricao');
+            const videoEmbed = document.getElementById('videos-feedback');
+            const feedbacksContainer = document.getElementById('feedbacks-container');
+            const submitButton = document.getElementById('submit-btn');
+            const commentField = document.getElementById('comment');
+            let selectedRating = 0;
+
+            // Obter o ID do vídeo da URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const videoId = urlParams.get('id');
+
+            if (!videoId) {
+                videoTitulo.textContent = "Erro";
+                videoDescricao.textContent = "ID do vídeo não fornecido na URL.";
+                return;
+            }
+
+            // Buscar informações do vídeo no JSON Server
+            fetch(`http://localhost:3000/videos?id=${videoId}`)
+                .then(response => response.ok ? response.json() : Promise.reject(response))
+                .then(videos => {
+                    if (videos.length === 0) {
+                        videoTitulo.textContent = "Erro";
+                        videoDescricao.textContent = "Nenhum vídeo encontrado para este ID.";
+                        return;
+                    }
+
+                    const video = videos[0];
+                    videoTitulo.textContent = video.titulo;
+                    videoDescricao.textContent = video.descricao;
+                    videoEmbed.src = video.link;
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar vídeo:', error);
+                    videoTitulo.textContent = "Erro";
+                    videoDescricao.textContent = "Erro ao carregar as informações do vídeo.";
+                });
+
+            // Buscar feedbacks relacionados ao vídeo
+            fetch(`http://localhost:3000/feedbacks?id_video=${videoId}`)
+                .then(response => response.ok ? response.json() : Promise.reject(response))
+                .then(feedbacks => {
+                    if (feedbacks.length === 0) {
+                        feedbacksContainer.innerHTML = '<p class="text-warning">Nenhum feedback encontrado para este vídeo.</p>';
+                        return;
+                    }
+
+                    feedbacks.forEach(feedback => {
+                        const feedbackCard = `
+                            <div class="feedback-card">
+                                <h5>${feedback.titulo}</h5>
+                                <p>${feedback.descricao}</p>
+                                <p>Estrelas: ${'★'.repeat(feedback.estrelas)}</p>
+                            </div>
+                        `;
+                        feedbacksContainer.insertAdjacentHTML('beforeend', feedbackCard);
+                    });
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar feedbacks:', error);
+                    feedbacksContainer.innerHTML = '<p class="text-danger">Erro ao carregar os feedbacks.</p>';
+                });
+
+            // Adicionar evento às estrelas
+            document.querySelectorAll('.star').forEach(star => {
+                star.addEventListener('click', function() {
+                    selectedRating = parseInt(this.getAttribute('data-rating'), 10);
+                    document.querySelectorAll('.star').forEach(s => {
+                        s.style.color = s.getAttribute('data-rating') <= selectedRating ? 'gold' : 'gray';
+                    });
+                });
+            });
+
+            // Enviar novo feedback
+            submitButton.addEventListener('click', function() {
+                const comment = commentField.value.trim();
+
+                if (!selectedRating) {
+                    alert("Por favor, selecione uma avaliação de estrelas.");
+                    return;
+                }
+
+                if (!comment) {
+                    alert("Por favor, escreva um comentário.");
+                    return;
+                }
+
+                const feedbackData = {
+                    id_video: videoId,
+                    titulo: `Feedback de ${new Date().toLocaleDateString()}`,
+                    descricao: comment,
+                    estrelas: selectedRating
+                };
+
+                fetch('http://localhost:3000/feedbacks', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(feedbackData)
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            alert("Feedback enviado com sucesso!");
+                            location.reload(); // Recarregar a página para atualizar os feedbacks
+                        } else {
+                            throw new Error("Erro ao enviar feedback.");
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro ao enviar feedback:', error);
+                        alert("Erro ao enviar feedback.");
+                    });
+            });
+        });
+    </script>
+
+
+    <script src="js/feedback-script.js"></script>
+</body>
+
+</html>

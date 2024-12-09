@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Novo Video</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+        }
+        
+        main {
+            margin-left: 16.6667%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div id="barra-lateral"></div>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-center py-4">
+                    <h1>Enviar novo vídeo</h1>
+                </div>
+
+                <div id="statusMessage" class="mb-3"></div>
+
+                <div class="card p-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="tituloVideo" class="form-label">Título do vídeo</label>
+                            <input type="text" class="form-control" id="tituloVideo" placeholder="Digite o título do vídeo">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="curso" class="form-label">Curso</label>
+                            <select class="form-select" id="curso">
+                                <option selected>Selecionar</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="linkVideo" class="form-label">Link do vídeo</label>
+                            <input type="url" class="form-control" id="linkVideo" placeholder="Digite o link do vídeo">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="descricao" class="form-label">Descrição</label>
+                            <textarea class="form-control" id="descricao" rows="3" placeholder="Digite a descrição"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const barraLateralContainer = document.getElementById('barra-lateral');
+
+            fetch('barralateral.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Erro ao carregar a barra lateral: ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    barraLateralContainer.innerHTML = html;
+
+                    barraLateralContainer.querySelectorAll("script").forEach(script => {
+                        const newScript = document.createElement("script");
+                        newScript.textContent = script.textContent;
+                        document.body.appendChild(newScript);
+                        script.remove();
+                    });
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar a barra lateral:', error);
+                });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const cursoSelect = document.getElementById("curso");
+        // Buscar cursos do JSON Server e preencher o select
+        fetch("http://localhost:3000/cursos") // Substitua pelo URL do JSON Server
+            .then(response => response.ok ? response.json() : Promise.reject(response))
+            .then(cursos => {
+                cursos.forEach(curso => {
+                    const option = document.createElement("option");
+                    option.value = curso.id; // Define o id como valor
+                    option.textContent = curso.titulo; // Define o título do curso como texto
+                    cursoSelect.appendChild(option);
+                });
+            })
+            .catch(error => console.error("Erro ao buscar cursos:", error));
+
+        // Adicionar vídeo ao JSON Server
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const tituloVideo = document.getElementById("tituloVideo").value;
+            const idCurso = document.getElementById("curso").value; // Pega o id do curso selecionado
+            const linkVideo = document.getElementById("linkVideo").value;
+            const descricao = document.getElementById("descricao").value;
+
+            const data = {
+                titulo: tituloVideo,
+                id_curso: idCurso, // Adiciona o id_curso como um número
+                link: linkVideo,
+                descricao: descricao
+            };
+
+            fetch("http://localhost:3000/videos", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(response => {
+                    if (response.ok) {
+                        showMessage("Vídeo cadastrado com sucesso!", "success");
+                    } else {
+                        throw new Error("Erro ao cadastrar o vídeo.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Erro:", error);
+                    showMessage("Erro ao cadastrar o vídeo.", "warning");
+                });
+        });
+
+        function showMessage(message, type) {
+            const statusMessage = document.getElementById("statusMessage");
+            statusMessage.innerHTML = `<div class="alert alert-${type}" role="alert">${message}</div>`;
+            setTimeout(() => statusMessage.innerHTML = "", 5000);
+        }
+    </script>
+
+</body>
+
+</html>

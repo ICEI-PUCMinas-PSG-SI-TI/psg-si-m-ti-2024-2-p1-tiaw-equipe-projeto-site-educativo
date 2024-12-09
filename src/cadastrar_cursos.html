@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Novo Curso</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+        }
+        
+        main {
+            margin-left: 16.6667%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div id="barra-lateral"></div>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-center py-4">
+                    <h1>Enviar Novo Curso</h1>
+                </div>
+
+                <div id="statusMessage" class="mb-3"></div>
+
+                <div class="card p-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="tituloCurso" class="form-label">Título do Curso</label>
+                            <input type="text" class="form-control" id="tituloCurso" placeholder="Digite o título do curso">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="descricaoCurso" class="form-label">Descrição</label>
+                            <textarea class="form-control" id="descricaoCurso" rows="3" placeholder="Digite a descrição"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="numeroAulas" class="form-label">Número de Aulas</label>
+                            <input type="number" class="form-control" id="numeroAulas" placeholder="Digite o número de aulas">
+                        </div>
+                        <div class="mb-3">
+                            <label for="idGrupo" class="form-label">ID do Grupo do WhatsApp</label>
+                            <input type="text" class="form-control" id="idGrupo" placeholder="Digite o ID do grupo (opcional)">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="thumbnailUrl" class="form-label">URL da Thumbnail</label>
+                            <input type="url" class="form-control" id="thumbnailUrl" placeholder="Digite a URL da thumbnail">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const barraLateralContainer = document.getElementById('barra-lateral');
+
+            fetch('barralateral.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Erro ao carregar a barra lateral: ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    barraLateralContainer.innerHTML = html;
+
+                    barraLateralContainer.querySelectorAll("script").forEach(script => {
+                        const newScript = document.createElement("script");
+                        newScript.textContent = script.textContent;
+                        document.body.appendChild(newScript);
+                        script.remove();
+                    });
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar a barra lateral:', error);
+                });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            // Formulário de envio
+            document.querySelector("form").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const tituloCurso = document.getElementById("tituloCurso").value.trim();
+                const descricaoCurso = document.getElementById("descricaoCurso").value.trim();
+                const numeroAulas = parseInt(document.getElementById("numeroAulas").value.trim());
+                const thumbnailUrl = document.getElementById("thumbnailUrl").value.trim();
+                const idGrupo = document.getElementById("idGrupo").value.trim() || null;
+
+                // Validar os campos obrigatórios
+                if (!tituloCurso || !descricaoCurso || !numeroAulas || !thumbnailUrl) {
+                    showMessage("Preencha todos os campos obrigatórios.", "warning");
+                    return;
+                }
+
+                // Criar objeto de dados
+                const data = {
+                    titulo: tituloCurso,
+                    descricao: descricaoCurso,
+                    aulas: numeroAulas,
+                    thumbnail_url: thumbnailUrl,
+                    id_grupo: idGrupo // Se vazio, será null
+                };
+
+                // URL do JSON Server
+                const jsonServerUrl = "http://localhost:3000/cursos";
+
+                // Enviar os dados para o JSON Server
+                fetch(jsonServerUrl, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            showMessage("Curso cadastrado com sucesso!", "success");
+                            // Limpar o formulário após o sucesso
+                            document.querySelector("form").reset();
+                        } else {
+                            throw new Error("Erro ao cadastrar o curso no servidor.");
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Erro:", error);
+                        showMessage("Cadastro não realizado", "warning");
+                    });
+            });
+
+            function showMessage(message, type) {
+                const statusMessage = document.getElementById("statusMessage");
+                statusMessage.innerHTML = `<div class="alert alert-${type}" role="alert">${message}</div>`;
+
+                setTimeout(() => {
+                    statusMessage.innerHTML = "";
+                }, 5000);
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
